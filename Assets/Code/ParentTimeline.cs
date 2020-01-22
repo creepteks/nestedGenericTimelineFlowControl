@@ -39,7 +39,6 @@ public class ParentTimeline : TimelineConditional
                 {
                     foreach (TimelineClip timelineClip in ct.GetClips())
                     {
-                        //timelineClip.duration = nestedTimeline.duration;
                         ControlPlayableAsset playableAsset = (ControlPlayableAsset)timelineClip.asset;
                         playableAsset.postPlayback = ActivationControlPlayable.PostPlaybackState.Revert;
                         playableAsset.updateDirector = false;
@@ -52,21 +51,6 @@ public class ParentTimeline : TimelineConditional
                     }
                 }
             }
-            // the following is not valid cause I no longer change the duration of the clips
-            //// the elevate animation should not disappear,
-            ////I change the duration of the timelineclip of Control Track for nested timeline and I have to change this one as well
-            //if (track.streamName == "treasureBoxAnimTrack")
-            //{
-            //    AnimationTrack at = (AnimationTrack)track.sourceObject;
-            //    foreach (TimelineClip clip in at.GetClips())
-            //    {
-            //        if (clip.displayName == "treasurebox-elevateTreasures")
-            //        {
-            //            clip.duration = nestedTimeline.duration;
-            //            break;
-            //        }
-            //    }
-            //}
         }
 
         // now I can play the timeline
