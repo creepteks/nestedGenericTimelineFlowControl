@@ -1,4 +1,4 @@
-# Nested, generic Unity's Timeline flow control
+# A generic flow control for nested Unity Timelines
 a PoC of how to control the flow of any generic nested timelines inside a parent timeline, with the ability to control the parent timeline to continue only after the nested timeline has finished playing
 
 ### The scenario:
